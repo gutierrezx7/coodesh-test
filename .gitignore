@@ -1,0 +1,34 @@
+# Arquivos de estado do Terraform
+*.tfstate
+*.tfstate.backup
+
+# Arquivos de log
+crash.log
+terraform.log
+
+# Arquivos de configuração do diretório .terraform
+.terraform/*
+
+# Arquivos de variáveis que podem conter informações sensíveis
+*.tfvars
+
+# Arquivos de bloqueio do Terraform
+.terraform.lock.hcl
+
+# Arquivos de IDE ou editor de texto
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Arquivos de chave SSH (caso sejam adicionados por engano)
+*.pem
+*.key
+
+# Arquivos e diretórios de nodejs
+node_modules/
+package-lock.json
+yarn.lock

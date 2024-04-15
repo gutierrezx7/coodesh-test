@@ -1,0 +1,22 @@
+# Este arquivo é usado para definir os eventos do ciclo de vida de implantação e as permissões para os arquivos e diretórios no código-fonte do aplicativo.
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/app
+    overwrite: true
+file_exists_behavior: OVERWRITE
+permissions:
+  - object: /var/www/html/app
+    pattern: '**'
+    owner: ubuntu
+    group: ubuntu
+    mode: 644
+    type:
+      - file
+      - directory
+hooks:
+  ApplicationStart:
+    - location: scripts/init.sh
+      timeout: 300
+      runas: ubuntu
